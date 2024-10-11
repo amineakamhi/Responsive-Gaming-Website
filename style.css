@@ -1,0 +1,241 @@
+/* Existing Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .5s all;
+    cursor: pointer;
+}
+section{
+    padding: 0 19%;
+}
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 30px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4D9559 0%, #38703D 28.53%, #133917 75.52%);
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 90px;
+    color: white;
+    line-height: 1;
+    margin: 0 0 45px;
+}
+
+.hero-text h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img {
+    width: 500px;
+    height: auto;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #4d9559;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.cta {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.cta:hover {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .50s ease;
+}
+
+.icons i:hover {
+    color: #4D9559;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #4D9559;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+}
+
+/* Mobile Version Adjustments (Max-width 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .navlist {
+        display: none; /* Hide the navigation by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    header.active .navlist {
+        display: flex; /* Show the menu when active */
+    }
+
+    .navlist a {
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #menu-icon {
+        display: block; /* Show the burger menu */
+    }
+
+    .hero {
+        grid-template-columns: 1fr; /* Stack hero elements vertically */
+        padding: 20% 5%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 60px; /* Scale down hero text */
+    }
+
+    .hero-text h5, .hero-text h4, .hero-text p {
+        font-size: 14px;
+    }
+
+    .hero-text a {
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+
+    .hero-img img {
+        width: 100%; /* Ensure image scales properly */
+        height: auto;
+    }
+
+    .icons {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    .scroll-down {
+        bottom: 5%;
+        right: 5%;
+    }
+}
